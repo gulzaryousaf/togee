@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-size">
+            <div class="bg_video">
+                <!-- <video id="live" muted autoplay></video> -->
+                <img src="imgs/cam.jpg" class="h-full w-full camera object-cover" alt="bg">
+                <img src="imgs/screen.jpg" class="h-full w-full screen hidden object-cover" alt="bg">
+            </div>
+
+            <div class="flex items-center relative z-50 flex-col justify-between h-full">
+                <div class="flex items-start justify-between w-full text-white top_icons">
+                    <div class="flex-shrink-0">
+                        <img height="38" src="imgs/minimize.svg" alt="Minimize">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img height="38" src="imgs/camera.svg" alt="Camera">
+                    </div>
+                </div>
+
+                <div class="messagesContainer mobile w-full flex flex-col relative">
+                    <div class="messages mobile flex flex-col-reverse">
+                        <ul>
+                            <script>
+                                for(let i = 0; i <=6; i++){
+                                    document.write(`
+                                        <li>
+                                            <div class="message">
+                                                <span class="user_name">Barbro ${i}</span>
+                                                <span class="user_msg">Lorem ipsum dolor sitem</span>
+                                            </div>
+                                        </li>
+                                    `)
+                                }
+                            </script>
+                            <li>
+                                <div class="joined">
+                                    <div class="wave"><img src="imgs/hand.svg" alt="Hand"></div>
+                                    <div class="message">
+                                        <span class="user_name">Barbro</span>
+                                        <span class="user_msg">Joined</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="msgInput mobile bg-black py-3 px-2 text-white flex flex-col items-center gap-3">
+                        <div class="expand_bar">&nbsp;</div>
+
+                        <div class="footer_actions flex w-full items-center">
+                            <span class="collapser cursor-pointer"><img class="h-5" src="imgs/chevron_right.svg" alt="Collapse"></span>
+
+                            <div class="action_icons flex items-center justify-between w-full relative">
+                                <div id="type_message" class="closed">
+                                    <div class="border border-gray-400 rounded-full flex items-center">
+                                        <input type="text" placeholder="Comment" class="p-1 bg-transparent w-full outline-none">
+            
+                                        <span class="flex-shrink-0"><img src="imgs/send.svg" alt="Send"></span>
+                                    </div>
+                                </div>
+
+                                <span id="message" class="inactive relative"><img src="imgs/message.svg" alt="message"></span>
+                                <span class="inactive"><img src="imgs/pen.svg" alt="Highlight"></span>
+                                <span id="share_screen" class="inactive"><img src="imgs/screen_share.svg" alt="Share Screen"></span>
+                                <span id="camera"><img src="imgs/close_cam.svg" alt="Camera"></span>
+                                <span><img src="imgs/close_mic.svg" alt="Mic"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="views">
+                        <div class="hearts">
+                            <img src="imgs/heart.svg" alt="Heart">
+                            <img src="imgs/heart.svg" alt="Heart">
+                            <img src="imgs/heart.svg" alt="Heart">
+                            <img src="imgs/heart.svg" alt="Heart">
+                        </div>
+                        <span class="count">123</span>
+                        <span class="icon"><img src="imgs/eye.svg" alt="Eye"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
